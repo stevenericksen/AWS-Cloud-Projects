@@ -1,77 +1,79 @@
 # VPC Flow Logs with Amazon Athena
 
 ## Overview
-This lab demonstrates building a complete AWS network monitoring pipeline — from VPC architecture through traffic generation to log analysis using SQL queries in Amazon Athena.
+Built a complete AWS network monitoring pipeline that captures VPC traffic, stores flow logs in S3, and enables SQL-based log analysis using Amazon Athena.
 
-**Duration:** ~1 hour  
-**Region:** US East (N. Virginia) us-east-1
+## Services Used
+- Amazon VPC
+- Amazon S3
+- Amazon EC2
+- Amazon Athena
+- VPC Flow Logs
 
----
+## What I Built
+- Created an S3 bucket with a log delivery bucket policy for VPC Flow Logs
+- Built a custom VPC (10.0.0.0/16) with public subnet, Internet Gateway, and route table
+- Configured VPC Flow Logs to capture all traffic at 1-minute intervals to S3
+- Launched an EC2 instance (Amazon Linux 2023, t2.micro) and installed Apache HTTPD to generate traffic
+- Created an Athena external table mapped to the S3 flow log path
+- Ran SQL queries against live VPC flow log data returning source/destination IPs and actions
+- Passed all lab validation checks at 100%
 
-## Architecture
-- S3 Bucket (log destination with IAM delivery policy)
-- Custom VPC with public subnet, Internet Gateway, and route table
-- VPC Flow Logs → S3
-- EC2 Instance (Amazon Linux 2023, t2.micro) generating HTTP traffic
-- Amazon Athena querying flow log data via SQL
+## Walkthrough
 
----
+### 1. S3 Bucket Policy Editor
+![Bucket Policy Editor](07_bucket-policy-editor.png)
 
-## Tasks Completed
+### 2. S3 Bucket Policy Saved
+![Bucket Policy Saved](01_s3-bucket-policy.png)
 
-| # | Task |
-|---|------|
-| 1 | Created S3 bucket with log delivery bucket policy |
-| 2 | Created custom VPC (10.0.0.0/16) |
-| 3 | Created and attached Internet Gateway |
-| 4 | Created public subnet (10.0.1.0/24) with auto-assign public IP |
-| 5 | Configured public route table with 0.0.0.0/0 → IGW route |
-| 6 | Created VPC Flow Log (All traffic, 1-min interval, S3 destination) |
-| 7 | Launched EC2 instance into custom VPC/subnet |
-| 8 | SSH'd into EC2 and installed Apache HTTPD to generate traffic |
-| 9 | Verified AWSLogs folder populated in S3 |
-| 10 | Created Athena external table mapped to flow log S3 path |
-| 11 | Ran SQL query returning 10 rows of parsed flow log data |
-| 12 | Passed all lab validation checks (100%) |
+### 3. Create VPC Configuration
+![Create VPC](08_create-vpc-config.png)
 
----
+### 4. VPC Created
+![VPC Created](02_vpc-created.png)
 
-## Screenshots
+### 5. Internet Gateway Attached
+![IGW Attached](03_igw-attached.png)
 
-### S3 Bucket & Bucket Policy
-<img src="07_bucket-policy-editor.png" width="800"/>
-<img src="01_s3-bucket-policy.png" width="800"/>
+### 6. Public Subnet Created
+![Public Subnet](06_public-subnet.png)
 
-### VPC Configuration
-<img src="08_create-vpc-config.png" width="800"/>
-<img src="02_vpc-created.png" width="800"/>
-<img src="03_igw-attached.png" width="800"/>
-<img src="06_public-subnet.png" width="800"/>
-<img src="05_subnet-association.png" width="800"/>
-<img src="04_route-table-igw.png" width="800"/>
+### 7. Subnet Association
+![Subnet Association](05_subnet-association.png)
 
-### VPC Flow Logs
-<img src="13_flowlog-s3-config.png" width="800"/>
-<img src="12_vpc-flowlog-active.png" width="800"/>
-<img src="16_s3-awslogs-folder.png" width="800"/>
+### 8. Route Table with IGW Route
+![Route Table](04_route-table-igw.png)
 
-### EC2 & Traffic Generation
-<img src="14_ec2-instance-running.png" width="800"/>
-<img src="15_ssh-ec2-terminal.png" width="800"/>
+### 9. Flow Log S3 Configuration
+![Flow Log Config](13_flowlog-s3-config.png)
 
-### Athena Query & Results
-<img src="10_athena-query-results.png" width="800"/>
-<img src="11_athena-results-detail.png" width="800"/>
+### 10. VPC Flow Log Active
+![Flow Log Active](12_vpc-flowlog-active.png)
 
-### Validation
-<img src="09_lab-validation-passed.png" width="800"/>
+### 11. AWSLogs Folder in S3
+![AWSLogs Folder](16_s3-awslogs-folder.png)
 
----
+### 12. EC2 Instance Running
+![EC2 Running](14_ec2-instance-running.png)
 
-## Key Skills Demonstrated
-- VPC design and networking (subnets, IGW, route tables)
+### 13. SSH into EC2
+![SSH Terminal](15_ssh-ec2-terminal.png)
+
+### 14. Athena Query Results
+![Athena Query](10_athena-query-results.png)
+
+### 15. Athena Results Detail
+![Athena Detail](11_athena-results-detail.png)
+
+### 16. Lab Validation Passed 100%
+![Validation](09_lab-validation-passed.png)
+
+## Skills Demonstrated
+- VPC design and network architecture
 - S3 bucket policy configuration for AWS log delivery
 - VPC Flow Log setup and S3 integration
 - EC2 provisioning and SSH access
-- Amazon Athena external table creation and SQL querying
+- Amazon Athena external table creation
+- SQL querying of live network flow log data
 - End-to-end cloud observability pipeline
