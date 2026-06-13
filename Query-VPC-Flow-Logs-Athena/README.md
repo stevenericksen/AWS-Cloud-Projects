@@ -22,52 +22,52 @@ Built a complete AWS network monitoring pipeline that captures VPC traffic, stor
 ## Walkthrough
 
 ### 1. S3 Bucket Policy Editor
-![Bucket Policy Editor](07_bucket-policy-editor.png)
+<img src="07_bucket-policy-editor.png" width="1000"/>
 
 ### 2. S3 Bucket Policy Saved
-![Bucket Policy Saved](01_s3-bucket-policy.png)
+<img src="01_s3-bucket-policy.png" width="1000"/>
 
 ### 3. Create VPC Configuration
-![Create VPC](08_create-vpc-config.png)
+<img src="08_create-vpc-config.png" width="1000"/>
 
 ### 4. VPC Created
-![VPC Created](02_vpc-created.png)
+<img src="02_vpc-created.png" width="1000"/>
 
 ### 5. Internet Gateway Attached
-![IGW Attached](03_igw-attached.png)
+<img src="03_igw-attached.png" width="1000"/>
 
 ### 6. Public Subnet Created
-![Public Subnet](06_public-subnet.png)
+<img src="06_public-subnet.png" width="1000"/>
 
 ### 7. Subnet Association
-![Subnet Association](05_subnet-association.png)
+<img src="05_subnet-association.png" width="1000"/>
 
 ### 8. Route Table with IGW Route
-![Route Table](04_route-table-igw.png)
+<img src="04_route-table-igw.png" width="1000"/>
 
 ### 9. Flow Log S3 Configuration
-![Flow Log Config](13_flowlog-s3-config.png)
+<img src="13_flowlog-s3-config.png" width="1000"/>
 
 ### 10. VPC Flow Log Active
-![Flow Log Active](12_vpc-flowlog-active.png)
+<img src="12_vpc-flowlog-active.png" width="1000"/>
 
 ### 11. AWSLogs Folder in S3
-![AWSLogs Folder](16_s3-awslogs-folder.png)
+<img src="16_s3-awslogs-folder.png" width="1000"/>
 
 ### 12. EC2 Instance Running
-![EC2 Running](14_ec2-instance-running.png)
+<img src="14_ec2-instance-running.png" width="1000"/>
 
 ### 13. SSH into EC2
-![SSH Terminal](15_ssh-ec2-terminal.png)
+<img src="15_ssh-ec2-terminal.png" width="1000"/>
 
 ### 14. Athena Query Results
-![Athena Query](10_athena-query-results.png)
+<img src="10_athena-query-results.png" width="1000"/>
 
 ### 15. Athena Results Detail
-![Athena Detail](11_athena-results-detail.png)
+<img src="11_athena-results-detail.png" width="1000"/>
 
 ### 16. Lab Validation Passed 100%
-![Validation](09_lab-validation-passed.png)
+<img src="09_lab-validation-passed.png" width="1000"/>
 
 ## Skills Demonstrated
 - VPC design and network architecture
