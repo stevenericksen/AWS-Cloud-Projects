@@ -39,32 +39,32 @@ This lab demonstrates building a complete AWS network monitoring pipeline — fr
 ## Screenshots
 
 ### S3 Bucket & Bucket Policy
-![Bucket Policy Editor](07_bucket-policy-editor.png)
-![Bucket Policy Saved](01_s3-bucket-policy.png)
+<img src="07_bucket-policy-editor.png" width="800"/>
+<img src="01_s3-bucket-policy.png" width="800"/>
 
 ### VPC Configuration
-![Create VPC](08_create-vpc-config.png)
-![VPC Created](02_vpc-created.png)
-![IGW Attached](03_igw-attached.png)
-![Public Subnet](06_public-subnet.png)
-![Subnet Association](05_subnet-association.png)
-![Route Table with IGW](04_route-table-igw.png)
+<img src="08_create-vpc-config.png" width="800"/>
+<img src="02_vpc-created.png" width="800"/>
+<img src="03_igw-attached.png" width="800"/>
+<img src="06_public-subnet.png" width="800"/>
+<img src="05_subnet-association.png" width="800"/>
+<img src="04_route-table-igw.png" width="800"/>
 
 ### VPC Flow Logs
-![Flow Log Config](13_flowlog-s3-config.png)
-![Flow Log Active](12_vpc-flowlog-active.png)
-![AWSLogs in S3](16_s3-awslogs-folder.png)
+<img src="13_flowlog-s3-config.png" width="800"/>
+<img src="12_vpc-flowlog-active.png" width="800"/>
+<img src="16_s3-awslogs-folder.png" width="800"/>
 
 ### EC2 & Traffic Generation
-![EC2 Running](14_ec2-instance-running.png)
-![SSH into EC2](15_ssh-ec2-terminal.png)
+<img src="14_ec2-instance-running.png" width="800"/>
+<img src="15_ssh-ec2-terminal.png" width="800"/>
 
 ### Athena Query & Results
-![Athena Query Results](10_athena-query-results.png)
-![Athena Results Detail](11_athena-results-detail.png)
+<img src="10_athena-query-results.png" width="800"/>
+<img src="11_athena-results-detail.png" width="800"/>
 
 ### Validation
-![Lab Passed 100%](09_lab-validation-passed.png)
+<img src="09_lab-validation-passed.png" width="800"/>
 
 ---
 
