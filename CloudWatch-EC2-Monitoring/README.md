@@ -44,7 +44,7 @@ Built a real-time monitoring solution that automatically notifies administrators
 ![AWS Notification](09-AWS-Notification-EC2-State-Change.png)
 
 ### 10. Lab Validation Passed 100%
-![Validation](10-Whizlabs-Validation-Passed.png)
+![Validation](10-Validation.png)
 
 ## Skills Demonstrated
 - Cloud monitoring and alerting
